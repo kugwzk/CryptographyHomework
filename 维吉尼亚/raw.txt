@@ -1,0 +1,897 @@
+﻿
+
+    ncbincbi logo
+    skip to main content
+    skip to navigation
+    resources
+    how to
+    about ncbi accesskeys
+
+sign in to ncbi
+bioproject
+search database
+search term
+clear input
+bioproject faq
+ 
+what is a bioproject?
+
+a bioproject is a collection of biological data related to a single initiative originating from a single organization or from a consortium. a bioproject record provides users a single place to find links to the diverse data generated for that project and deposited into the archival databases maintained by members of the insdc. typical examples of a bioproject include a multiisolate project for sequencing multiple strains of a bacterial species, or a monoisolate project for the genome and transcriptome of a particular organism. the description you supply about this research effort is important for providing context to your experimental data.
+under what circumstances is it necessary to register a bioproject?
+
+bioproject registration is required as part of data deposit to several ncbi primary data archives including sra, tsa and wgs. typically, a bioproject is registered first or during the submission of a genome assembly being submitted to wgs. the bioproject is assigned a bioproject accession number (prjnaxxxxxx) which is referenced when submitting the corresponding biosamples and experimental data to archival databases. use the same bioproject accession for related data, eg the raw reads that are submitted to sra and a genome assembly of those reads that is submitted to genbank/wgs. at this time, bioproject submission is not required for geo or dbgap; deposit to those databases triggers automatic creation of bioproject records.
+how do i submit to bioproject?
+
+several submission routes are supported:
+
+bioproject submission portal to pre-register a project before submitting data
+
+    online wizard that supports single submission using web forms.
+    most submitters should use this method or the next one
+     
+
+wgs submission portal to register a project while submitting a genome to wgs
+
+    online wizard that supports single submission using web forms
+    most submitters should use this method or the previous one                                            
+
+xml deposit to pre-register
+
+    programmatic api deposit in xml format. suitable only when data is stored in an inhouse database or lims, and from which valid bioproject xml can be generated. here are the instructions and schemas.
+
+what information should i provide about my bioproject?
+
+you need to indicate the type of project and the sample scope, which are defined in the glossary.
+
+a description of the project is also required. provide comprehensive information that will allow users to fully interpret your study.
+
+you will need to select the relevance; the options are agricultural, environmental, evolution, industrial, medical, model organism or other. if ‘other’ is selected, then you’ll need to provide more detail on the form.
+
+although it is not required, it is highly recommended that you include the grant(s) associated with the research effort. a new feature in september 2015 is that you can look up your nih grant during the submission process. for non-nih grants you’ll need to provide the grant id and title as well as the funding agency.
+
+depending upon the scope of the project, the organism is required. for example, a monoisolate bioproject requires the genus and species, but you should also provide the infraspecific identifier (strain, breed, cultivar or isolate) that will be registered in biosample for that bioproject.
+when should i choose ‘multiisolate’ as the scope for a bioproject?
+
+choose multiisolate as the scope when the goal of the research is to compare multiple individuals or strains of the same species, eg, in a ‘variation’ or ‘genome sequencing and assembly’ project. choose multispecies when different species are being examined. choose monoisolate if the goal is to make a single genome or transcriptome assembly, even if more than one individual was the source of the dna or rna.
+do i need to make a separate bioproject for every type of data?
+
+no, you do not. you should organize your bioprojects the most appropriate way for your research effort. for example, if you are creating both transcriptome and genome assemblies of an organism, then you could register a single “genome sequencing and assembly” bioproject and submit all of the data with that bioproject. once the data are public, the bioproject will be automatically updated with links to the data and the additional project type will be added. be sure to include all the goals of the project in the description.
+what types of validation must my bioproject pass?
+
+beyond providing the required information on the submission web pages, the only validation is that the bioproject cannot be a duplicate. bioprojects from the same submitter are unique if any of these is different:
+
+    organism name, strain or isolate
+    project type
+    grant
+    organizations, eg a different consortium
+    external links to non-ncbi resources
+    title (this is usually auto-generated from the organism and project type)
+     
+
+when will i receive my bioproject accession number?
+
+if your submission passes validation, you can expect to receive a bioproject accession number(s) within a few minutes by email.
+when will my bioproject record be released?
+
+during submission, you are presented two options for releasing your bioproject to the public. if you select 'release immediately upon curation' the records will be released within a few hours of having a valid organism name. if you select 'release on a specified date', the bioproject will be released on the date you specify or upon the release of any data that reference that bioproject accession, whichever is first. at this time, we do not have a mechanism in place for you to view your records before release.
+will ncbi apply further curation to my bioproject records?
+
+no, bioproject is a submitter-driven repository. submitters are responsible for the content and accuracy of their records, and for ensuring that sufficient information has been provided to allow users to fully interpret their study. bioproject submissions must pass basic validation rules and taxonomy review. otherwise, records are generally not subject to further curation.
+how do i update my bioproject?
+
+at this time, it is necessary for submitters to write to bioprojecthelp@ncbi.nlm.nih.gov to request updates and withdrawals as necessary. please note that when bioprojects are updated, the submission overview page in the submission portal will not reflect this change. that page is only a record of the initial submission, and does not display changes made in the bioproject database.
+should i cite bioproject accession numbers in my manuscript?
+
+no, typically, you should cite the accession numbers that are assigned to your data submissions, e.g. the genbank, wgs or sra accession numbers. if individual bioprojects do need to be referenced, state that "the data have been deposited with links to bioproject accession number prjnaxxxxxx in the ncbi bioproject database (https://www.ncbi.nlm.nih.gov/bioproject/)."
+how do i get a locus_tag prefix for annotating a genome assembly?
+
+a locus_tag prefix is automatically assigned to each bioproject/biosample pair of a “genome sequencing and assembly” project, but you must register the bioproject first and then register the biosample(s) associated with that bioproject. the locus_tag prefixes are reported back in the bioproject submission portal. if there are multiple prefixes, they are reported there in a file named “locustagprefix.txt”. if there are problems, write to bioprojecthelp@ncbi.nlm.nih.gov.
+
+if you request to have a prokaryotic genome annotated by ncbi’s prokaryotic genome annotation pipeline (pgap), then you need to have a bioproject and biosample registered for that genome. pgap will ensure that there is a locus_tag prefix for the genome when the pipeline is run, and the registered locus_tag prefix will be reported back in the bioproject submission portal.
+how do i create an umbrella bioproject?
+
+if you want to cluster several of your data-level projects under an umbrella, write to bioprojecthelp@ncbi.nlm.nih.gov with details about what projects you want to cluster and why.
+you are here: ncbi
+write to the help desk
+simple ncbi directory
+
+    getting started
+    ncbi education
+    ncbi help manual
+    ncbi handbook
+    training & tutorials
+    submit data
+
+    resources
+    chemicals & bioassays
+    data & software
+    dna & rna
+    domains & structures
+    genes & expression
+    genetics & medicine
+    genomes & maps
+    homology
+    literature
+    proteins
+    sequence analysis
+    taxonomy
+    variation
+
+    popular
+    pubmed
+    bookshelf
+    pubmed central
+    pubmed health
+    blast
+    nucleotide
+    genome
+    snp
+    gene
+    protein
+    pubchem
+
+    featured
+    genetic testing registry
+    pubmed health
+    genbank
+    reference sequences
+    gene expression omnibus
+    map viewer
+    human genome
+    mouse genome
+    influenza virus
+    primer-blast
+    sequence read archive
+
+    ncbi information
+    about ncbi
+    research at ncbi
+    ncbi news
+    ncbi ftp site
+    ncbi on facebook
+    ncbi on twitter
+    ncbi on youtube
+
+nlm
+nih
+dhhs
+usa.gov
+
+national center for biotechnology information, u.s. national library of medicine 8600 rockville pike, bethesda md, 20894 usa
+policies and guidelines | contact
+
+last updated: 2015-12-31t08:49:23-05:00
+
+
+
+    ncbincbi logo
+    skip to main content
+    skip to navigation
+    resources
+    how to
+    about ncbi accesskeys
+
+sign in to ncbi
+bioproject
+search database
+search term
+clear input
+bioproject faq
+ 
+what is a bioproject?
+
+a bioproject is a collection of biological data related to a single initiative originating from a single organization or from a consortium. a bioproject record provides users a single place to find links to the diverse data generated for that project and deposited into the archival databases maintained by members of the insdc. typical examples of a bioproject include a multiisolate project for sequencing multiple strains of a bacterial species, or a monoisolate project for the genome and transcriptome of a particular organism. the description you supply about this research effort is important for providing context to your experimental data.
+under what circumstances is it necessary to register a bioproject?
+
+bioproject registration is required as part of data deposit to several ncbi primary data archives including sra, tsa and wgs. typically, a bioproject is registered first or during the submission of a genome assembly being submitted to wgs. the bioproject is assigned a bioproject accession number (prjnaxxxxxx) which is referenced when submitting the corresponding biosamples and experimental data to archival databases. use the same bioproject accession for related data, eg the raw reads that are submitted to sra and a genome assembly of those reads that is submitted to genbank/wgs. at this time, bioproject submission is not required for geo or dbgap; deposit to those databases triggers automatic creation of bioproject records.
+how do i submit to bioproject?
+
+several submission routes are supported:
+
+bioproject submission portal to pre-register a project before submitting data
+
+    online wizard that supports single submission using web forms.
+    most submitters should use this method or the next one
+     
+
+wgs submission portal to register a project while submitting a genome to wgs
+
+    online wizard that supports single submission using web forms
+    most submitters should use this method or the previous one                                            
+
+xml deposit to pre-register
+
+    programmatic api deposit in xml format. suitable only when data is stored in an inhouse database or lims, and from which valid bioproject xml can be generated. here are the instructions and schemas.
+
+what information should i provide about my bioproject?
+
+you need to indicate the type of project and the sample scope, which are defined in the glossary.
+
+a description of the project is also required. provide comprehensive information that will allow users to fully interpret your study.
+
+you will need to select the relevance; the options are agricultural, environmental, evolution, industrial, medical, model organism or other. if ‘other’ is selected, then you’ll need to provide more detail on the form.
+
+although it is not required, it is highly recommended that you include the grant(s) associated with the research effort. a new feature in september 2015 is that you can look up your nih grant during the submission process. for non-nih grants you’ll need to provide the grant id and title as well as the funding agency.
+
+depending upon the scope of the project, the organism is required. for example, a monoisolate bioproject requires the genus and species, but you should also provide the infraspecific identifier (strain, breed, cultivar or isolate) that will be registered in biosample for that bioproject.
+when should i choose ‘multiisolate’ as the scope for a bioproject?
+
+choose multiisolate as the scope when the goal of the research is to compare multiple individuals or strains of the same species, eg, in a ‘variation’ or ‘genome sequencing and assembly’ project. choose multispecies when different species are being examined. choose monoisolate if the goal is to make a single genome or transcriptome assembly, even if more than one individual was the source of the dna or rna.
+do i need to make a separate bioproject for every type of data?
+
+no, you do not. you should organize your bioprojects the most appropriate way for your research effort. for example, if you are creating both transcriptome and genome assemblies of an organism, then you could register a single “genome sequencing and assembly” bioproject and submit all of the data with that bioproject. once the data are public, the bioproject will be automatically updated with links to the data and the additional project type will be added. be sure to include all the goals of the project in the description.
+what types of validation must my bioproject pass?
+
+beyond providing the required information on the submission web pages, the only validation is that the bioproject cannot be a duplicate. bioprojects from the same submitter are unique if any of these is different:
+
+    organism name, strain or isolate
+    project type
+    grant
+    organizations, eg a different consortium
+    external links to non-ncbi resources
+    title (this is usually auto-generated from the organism and project type)
+     
+
+when will i receive my bioproject accession number?
+
+if your submission passes validation, you can expect to receive a bioproject accession number(s) within a few minutes by email.
+when will my bioproject record be released?
+
+during submission, you are presented two options for releasing your bioproject to the public. if you select 'release immediately upon curation' the records will be released within a few hours of having a valid organism name. if you select 'release on a specified date', the bioproject will be released on the date you specify or upon the release of any data that reference that bioproject accession, whichever is first. at this time, we do not have a mechanism in place for you to view your records before release.
+will ncbi apply further curation to my bioproject records?
+
+no, bioproject is a submitter-driven repository. submitters are responsible for the content and accuracy of their records, and for ensuring that sufficient information has been provided to allow users to fully interpret their study. bioproject submissions must pass basic validation rules and taxonomy review. otherwise, records are generally not subject to further curation.
+how do i update my bioproject?
+
+at this time, it is necessary for submitters to write to bioprojecthelp@ncbi.nlm.nih.gov to request updates and withdrawals as necessary. please note that when bioprojects are updated, the submission overview page in the submission portal will not reflect this change. that page is only a record of the initial submission, and does not display changes made in the bioproject database.
+should i cite bioproject accession numbers in my manuscript?
+
+no, typically, you should cite the accession numbers that are assigned to your data submissions, e.g. the genbank, wgs or sra accession numbers. if individual bioprojects do need to be referenced, state that "the data have been deposited with links to bioproject accession number prjnaxxxxxx in the ncbi bioproject database (https://www.ncbi.nlm.nih.gov/bioproject/)."
+how do i get a locus_tag prefix for annotating a genome assembly?
+
+a locus_tag prefix is automatically assigned to each bioproject/biosample pair of a “genome sequencing and assembly” project, but you must register the bioproject first and then register the biosample(s) associated with that bioproject. the locus_tag prefixes are reported back in the bioproject submission portal. if there are multiple prefixes, they are reported there in a file named “locustagprefix.txt”. if there are problems, write to bioprojecthelp@ncbi.nlm.nih.gov.
+
+if you request to have a prokaryotic genome annotated by ncbi’s prokaryotic genome annotation pipeline (pgap), then you need to have a bioproject and biosample registered for that genome. pgap will ensure that there is a locus_tag prefix for the genome when the pipeline is run, and the registered locus_tag prefix will be reported back in the bioproject submission portal.
+how do i create an umbrella bioproject?
+
+if you want to cluster several of your data-level projects under an umbrella, write to bioprojecthelp@ncbi.nlm.nih.gov with details about what projects you want to cluster and why.
+you are here: ncbi
+write to the help desk
+simple ncbi directory
+
+    getting started
+    ncbi education
+    ncbi help manual
+    ncbi handbook
+    training & tutorials
+    submit data
+
+    resources
+    chemicals & bioassays
+    data & software
+    dna & rna
+    domains & structures
+    genes & expression
+ 
+    online wizard that supports single submission using web forms
+    most submitters should use this method or the previous one                                            
+
+xml deposit to pre-register
+
+    programmatic api deposit in xml format. suitable only when data is stored in an inhouse database or lims, and from which valid bioproject xml can be generated. here are the instructions and schemas.
+
+what information should i provide about my bioproject?
+
+you need to indicate the type of project and the sample scope, which are defined in the glossary.
+
+a description of the project is also required. provide comprehensive information that will allow users to fully interpret your study.
+
+you will need to select the relevance; the options are agricultural, environmental, evolution, industrial, medical, model organism or other. if ‘other’ is selected, then you’ll need to provide more detail on the form.
+
+although it is not required, it is highly recommended that you include the grant(s) associated with the research effort. a new feature in september 2015 is that you can look up your nih grant during the submission process. for non-nih grants you’ll need to provide the grant id and title as well as the funding agency.
+
+depending upon the scope of the project, the organism is required. for example, a monoisolate bioproject requires the genus and species, but you should also provide the infraspecific identifier (strain, breed, cultivar or isolate) that will be registered in biosample for that bioproject.
+when should i choose ‘multiisolate’ as the scope for a bioproject?
+
+choose multiisolate as the scope when the goal of the research is to compare multiple individuals or strains of the same species, eg, in a ‘variation’ or ‘genome sequencing and assembly’ project. choose multispecies when different species are being examined. choose monoisolate if the goal is to make a single genome or transcriptome assembly, even if more than one individual was the source of the dna or rna.
+do i need to make a separate bioproject for every type of data?
+
+no, you do not. you should organize your bioprojects the most appropriate way for your research effort. for example, if you are creating both transcriptome and genome assemblies of an organism, then you could register a single “genome sequencing and assembly” bioproject and submit all of the data with that bioproject. once the data are public, the bioproject will be automatically updated with links to the data and the additional project type will be added. be sure to include all the goals of the project in the description.
+what types of validation must my bioproject pass?
+
+beyond providing the required information on the submission web pages, the only validation is that the bioproject cannot be a duplicate. bioprojects from the same submitter are unique if any of these is different:
+
+    organism name, strain or isolate
+    project type
+    grant
+    organizations, eg a different consortium
+    external links to non-ncbi resources
+    title (this is usually auto-generated from the organism and project type)
+     
+
+when will i receive my bioproject accession number?
+
+if your submission passes validation, you can expect to receive a bioproject accession number(s) within a few minutes by email.
+when will my bioproject record be released?
+
+during submission, you are presented two options for releasing your bioproject to the public. if you select 'release immediately upon curation' the records will be released within a few hours of having a valid organism name. if you select 'release on a specified date', the bioproject will be released on the date you specify or upon the release of any data that reference that bioproject accession, whichever is first. at this time, we do not have a mechanism in place for you to view your records before release.
+will ncbi apply further curation to my bioproject records?
+
+no, bioproject is a submitter-driven repository. submitters are responsible for the content and accuracy of their records, and for ensuring that sufficient information has been provided to allow users to fully interpret their study. bioproject submissions must pass basic validation rules and taxonomy review. otherwise, records are generally not subject to further curation.
+how do i update my bioproject?
+
+at this time, it is necessary for submitters to write to bioprojecthelp@ncbi.nlm.nih.gov to request updates and withdrawals as necessary. please note that when bioprojects are updated, the submission overview page in the submission portal will not reflect this change. that page is only a record of the initial submission, and does not display changes made in the bioproject database.
+should i cite bioproject accession numbers in my manuscript?
+
+no, typically, you should cite the accession numbers that are assigned to your data submissions, e.g. the genbank, wgs or sra accession numbers. if individual bioprojects do need to be referenced, state that "the data have been deposited with links to bioproject accession number prjnaxxxxxx in the ncbi bioproject database (https://www.ncbi.nlm.nih.gov/bioproject/)."
+how do i get a locus_tag prefix for annotating a genome assembly?
+
+a locus_tag prefix is automatically assigned to each bioproject/biosample pair of a “genome sequencing and assembly” project, but you must register the bioproject first and then register the biosample(s) associated with that bioproject. the locus_tag prefixes are reported back in the bioproject submission portal. if there are multiple prefixes, they are reported there in a file named “locustagprefix.txt”. if there are problems, write to bioprojecthelp@ncbi.nlm.nih.gov.
+
+if you request to have a prokaryotic genome annotated by ncbi’s prokaryotic genome annotation pipeline (pgap), then you need to have a bioproject and biosample registered for that genome. pgap will ensure that there is a locus_tag prefix for the genome when the pipeline is run, and the registered locus_tag prefix will be reported back in the bioproject submission portal.
+how do i create an umbrella bioproject?
+
+if you want to cluster several of your data-level projects under an umbrella, write to bioprojecthelp@ncbi.nlm.nih.gov with details about what projects you want to cluster and why.
+you are here: ncbi
+write to the help desk
+simple ncbi directory
+
+    getting started
+    ncbi education
+    ncbi help manual
+    ncbi handbook
+    training & tutorials
+    submit data
+
+    resources
+    chemicals & bioassays
+    data & software
+    dna & rna
+    domains & structures
+    genes & expression
+    genetics & medicine
+    genomes & maps
+    homology
+    literature
+    proteins
+    sequence analysis
+    taxonomy
+    variation
+
+    popular
+    pubmed
+    bookshelf
+    pubmed central
+    pubmed health
+    blast
+    nucleotide
+    genome
+    snp
+    gene
+    protein
+    pubchem
+
+    featured
+    genetic testing registry
+    pubmed health
+    genbank
+    reference sequences
+    gene expression omnibus
+    map viewer
+    human genome
+    mouse genome
+    influenza virus
+    primer-blast
+    sequence read archive
+
+    ncbi information
+    about ncbi
+    research at ncbi
+    ncbi news
+    ncbi ftp site
+    ncbi on facebook
+    ncbi on twitter
+    ncbi on youtube
+
+nlm
+nih
+dhhs
+usa.gov
+
+national center for biotechnology information, u.s. national library of medicine 8600 rockville pike, bethesda md, 20894 usa
+policies and guidelines | contact
+
+last updated: 2015-12-31t08:49:23-05:00
+
+
+
+    ncbincbi logo
+    skip to main content
+    skip to navigation
+    resources
+    how to
+    about ncbi accesskeys
+
+sign in to ncbi
+bioproject
+search database
+search term
+clear input
+bioproject faq
+ 
+what is a bioproject?
+
+a bioproject is a collection of biological data related to a single initiative originating from a single organization or from a consortium. a bioproject record provides users a single place to find links to the diverse data generated for that project and deposited into the archival databases maintained by members of the insdc. typical examples of a bioproject include a multiisolate project for sequencing multiple strains of a bacterial species, or a monoisolate project for the genome and transcriptome of a particular organism. the description you supply about this research effort is important for providing context to your experimental data.
+under what circumstances is it necessary to register a bioproject?
+
+bioproject registration is required as part of data deposit to several ncbi primary data archives including sra, tsa and wgs. typically, a bioproject is registered first or during the submission of a genome assembly being submitted to wgs. the bioproject is assigned a bioproject accession number (prjnaxxxxxx) which is referenced when submitting the corresponding biosamples and experimental data to archival databases. use the same bioproject accession for related data, eg the raw reads that are submitted to sra and a genome assembly of those reads that is submitted to genbank/wgs. at this time, bioproject submission is not required for geo or dbgap; deposit to those databases triggers automatic creation of bioproject records.
+how do i submit to bioproject?
+
+several submission routes are supported:
+
+bioproject submission portal to pre-register a project before submitting data
+
+    online wizard that supports single submission using web forms.
+    most submitters should use this method or the next one
+     
+
+wgs submission portal to register a project while submitting a genome to wgs
+
+    online wizard that supports single submission using web forms
+    most submitters should use this method or the previous one                                            
+
+xml deposit to pre-register
+
+    programmatic api deposit in xml format. suitable only when data is stored in an inhouse database or lims, and from which valid bioproject xml can be generated. here are the instructions and schemas.
+
+what information should i provide about my bioproject?
+
+you need to indicate the type of project and the sample scope, which are defined in the glossary.
+
+a description of the project is also required. provide comprehensive information that will allow users to fully interpret your study.
+
+you will need to select the relevance; the options are agricultural, environmental, evolution, industrial, medical, model organism or other. if ‘other’ is selected, then you’ll need to provide more detail on the form.
+
+although it is not required, it is highly recommended that you include the grant(s) associated with the research effort. a new feature in september 2015 is that you can look up your nih grant during the submission process. for non-nih grants you’ll need to provide the grant id and title as well as the funding agency.
+
+depending upon the scope of the project, the organism is required. for example, a monoisolate bioproject requires the genus and species, but you should also provide the infraspecific identifier (strain, breed, cultivar or isolate) that will be registered in biosample for that bioproject.
+when should i choose ‘multiisolate’ as the scope for a bioproject?
+
+choose multiisolate as the scope when the goal of the research is to compare multiple individuals or strains of the same species, eg, in a ‘variation’ or ‘genome sequencing and assembly’ project. choose multispecies when different species are being examined. choose monoisolate if the goal is to make a single genome or transcriptome assembly, even if more than one individual was the source of the dna or rna.
+do i need to make a separate bioproject for every type of data?
+
+no, you do not. you should organize your bioprojects the most appropriate way for your research effort. for example, if you are creating both transcriptome and genome assemblies of an organism, then you could register a single “genome sequencing and assembly” bioproject and submit all of the data with that bioproject. once the data are public, the bioproject will be automatically updated with links to the data and the additional project type will be added. be sure to include all the goals of the project in the description.
+what types of validation must my bioproject pass?
+
+beyond providing the required information on the submission web pages, the only validation is that the bioproject cannot be a duplicate. bioprojects from the same submitter are unique if any of these is different:
+
+    organism name, strain or isolate
+    project type
+    grant
+    organizations, eg a different consortium
+    external links to non-ncbi resources
+    title (this is usually auto-generated from the organism and project type)
+     
+
+when will i receive my bioproject accession number?
+
+if your submission passes validation, you can expect to receive a bioproject accession number(s) within a few minutes by email.
+when will my bioproject record be released?
+
+during submission, you are presented two options for releasing your bioproject to the public. if you select 'release immediately upon curation' the records will be released within a few hours of having a valid organism name. if you select 'release on a specified date', the bioproject will be released on the date you specify or upon the release of any data that reference that bioproject accession, whichever is first. at this time, we do not have a mechanism in place for you to view your records before release.
+will ncbi apply further curation to my bioproject records?
+
+no, bioproject is a submitter-driven repository. submitters are responsible for the content and accuracy of their records, and for ensuring that sufficient information has been provided to allow users to fully interpret their study. bioproject submissions must pass basic validation rules and taxonomy review. otherwise, records are generally not subject to further curation.
+how do i update my bioproject?
+
+at this time, it is necessary for submitters to write to bioprojecthelp@ncbi.nlm.nih.gov to request updates and withdrawals as necessary. please note that when bioprojects are updated, the submission overview page in the submission portal will not reflect this change. that page is only a record of the initial submission, and does not display changes made in the bioproject database.
+should i cite bioproject accession numbers in my manuscript?
+
+no, typically, you should cite the accession numbers that are assigned to your data submissions, e.g. the genbank, wgs or sra accession numbers. if individual bioprojects do need to be referenced, state that "the data have been deposited with links to bioproject accession number prjnaxxxxxx in the ncbi bioproject database (https://www.ncbi.nlm.nih.gov/bioproject/)."
+how do i get a locus_tag prefix for annotating a genome assembly?
+
+a locus_tag prefix is automatically assigned to each bioproject/biosample pair of a “genome sequencing and assembly” project, but you must register the bioproject first and then register the biosample(s) associated with that bioproject. the locus_tag prefixes are reported back in the bioproject submission portal. if there are multiple prefixes, they are reported there in a file named “locustagprefix.txt”. if there are problems, write to bioprojecthelp@ncbi.nlm.nih.gov.
+
+if you request to have a prokaryotic genome annotated by ncbi’s prokaryotic genome annotation pipeline (pgap), then you need to have a bioproject and biosample registered for that genome. pgap will ensure that there is a locus_tag prefix for the genome when the pipeline is run, and the registered locus_tag prefix will be reported back in the bioproject submission portal.
+how do i create an umbrella bioproject?
+
+if you want to cluster several of your data-level projects under an umbrella, write to bioprojecthelp@ncbi.nlm.nih.gov with details about what projects you want to cluster and why.
+you are here: ncbi
+write to the help desk
+simple ncbi directory
+
+    getting started
+    ncbi education
+    ncbi help manual
+    ncbi handbook
+    training & tutorials
+    submit data
+
+    resources
+    chemicals & bioassays
+    data & software
+    dna & rna
+    domains & structures
+    genes & expression
+    genetics & medicine
+    genomes & maps
+    homology
+    literature
+    proteins
+    sequence analysis
+    taxonomy
+    variation
+
+    popular
+    pubmed
+    bookshelf
+    pubmed central
+    pubmed health
+    blast
+    nucleotide
+    genome
+    snp
+    gene
+    protein
+    pubchem
+
+    featured
+    genetic testing registry
+    pubmed health
+    genbank
+    reference sequences
+    gene expression omnibus
+    map viewer
+    human genome
+    mouse genome
+    influenza virus
+    primer-blast
+    sequence read archive
+
+    ncbi information
+    about ncbi
+    research at ncbi
+    ncbi news
+    ncbi ftp site
+    ncbi on facebook
+    ncbi on twitter
+    ncbi on youtube
+
+nlm
+nih
+dhhs
+usa.gov
+
+national center for biotechnology information, u.s. national library of medicine 8600 rockville pike, bethesda md, 20894 usa
+policies and guidelines | contact
+
+last updated: 2015-12-31t08:49:23-05:00
+
+
+
+    ncbincbi logo
+    skip to main content
+    skip to navigation
+    resources
+    how to
+    about ncbi accesskeys
+
+sign in to ncbi
+bioproject
+search database
+search term
+clear input
+bioproject faq
+ 
+what is a bioproject?
+
+a bioproject is a collection of biological data related to a single initiative originating from a single organization or from a consortium. a bioproject record provides users a single place to find links to the diverse data generated for that project and deposited into the archival databases maintained by members of the insdc. typical examples of a bioproject include a multiisolate project for sequencing multiple strains of a bacterial species, or a monoisolate project for the genome and transcriptome of a particular organism. the description you supply about this research effort is important for providing context to your experimental data.
+under what circumstances is it necessary to register a bioproject?
+
+bioproject registration is required as part of data deposit to several ncbi primary data archives including sra, tsa and wgs. typically, a bioproject is registered first or during the submission of a genome assembly being submitted to wgs. the bioproject is assigned a bioproject accession number (prjnaxxxxxx) which is referenced when submitting the corresponding biosamples and experimental data to archival databases. use the same bioproject accession for related data, eg the raw reads that are submitted to sra and a genome assembly of those reads that is submitted to genbank/wgs. at this time, bioproject submission is not required for geo or dbgap; deposit to those databases triggers automatic creation of bioproject records.
+how do i submit to bioproject?
+
+several submission routes are supported:
+
+bioproject submission portal to pre-register a project before submitting data
+
+    online wizard that supports single submission using web forms.
+    most submitters should use this method or the next one
+     
+
+wgs submission portal to register a project while submitting a genome to wgs
+
+    online wizard that supports single submission using web forms
+    most submitters should use this method or the previous one                                            
+
+xml deposit to pre-register
+
+    programmatic api deposit in xml format. suitable only when data is stored in an inhouse database or lims, and from which valid bioproject xml can be generated. here are the instructions and schemas.
+
+what information should i provide about my bioproject?
+
+you need to indicate the type of project and the sample scope, which are defined in the glossary.
+
+a description of the project is also required. provide comprehensive information that will allow users to fully interpret your study.
+
+you will need to select the relevance; the options are agricultural, environmental, evolution, industrial, medical, model organism or other. if ‘other’ is selected, then you’ll need to provide more detail on the form.
+
+although it is not required, it is highly recommended that you include the grant(s) associated with the research effort. a new feature in september 2015 is that you can look up your nih grant during the submission process. for non-nih grants you’ll need to provide the grant id and title as well as the funding agency.
+
+depending upon the scope of the project, the organism is required. for example, a monoisolate bioproject requires the genus and species, but you should also provide the infraspecific identifier (strain, breed, cultivar or isolate) that will be registered in biosample for that bioproject.
+when should i choose ‘multiisolate’ as the scope for a bioproject?
+
+choose multiisolate as the scope when the goal of the research is to compare multiple individuals or strains of the same species, eg, in a ‘variation’ or ‘genome sequencing and assembly’ project. choose multispecies when different species are being examined. choose monoisolate if the goal is to make a single genome or transcriptome assembly, even if more than one individual was the source of the dna or rna.
+do i need to make a separate bioproject for every type of data?
+
+no, you do not. you should organize your bioprojects the most appropriate way for your research effort. for example, if you are creating both transcriptome and genome assemblies of an organism, then you could register a single “genome sequencing and assembly” bioproject and submit all of the data with that bioproject. once the data are public, the bioproject will be automatically updated with links to the data and the additional project type will be added. be sure to include all the goals of the project in the description.
+what types of validation must my bioproject pass?
+
+beyond providing the required information on the submission web pages, the only validation is that the bioproject cannot be a duplicate. bioprojects from the same submitter are unique if any of these is different:
+
+    organism name, strain or isolate
+    project type
+    grant
+    organizations, eg a different consortium
+    external links to non-ncbi resources
+    title (this is usually auto-generated from the organism and project type)
+     
+
+when will i receive my bioproject accession number?
+
+if your submission passes validation, you can expect to receive a bioproject accession number(s) within a few minutes by email.
+when will my bioproject record be released?
+
+during submission, you are presented two options for releasing your bioproject to the public. if you select 'release immediately upon curation' the records will be released within a few hours of having a valid organism name. if you select 'release on a specified date', the bioproject will be released on the date you specify or upon the release of any data that reference that bioproject accession, whichever is first. at this time, we do not have a mechanism in place for you to view your records before release.
+will ncbi apply further curation to my bioproject records?
+
+no, bioproject is a submitter-driven repository. submitters are responsible for the content and accuracy of their records, and for ensuring that sufficient information has been provided to allow users to fully interpret their study. bioproject submissions must pass basic validation rules and taxonomy review. otherwise, records are generally not subject to further curation.
+how do i update my bioproject?
+
+at this time, it is necessary for submitters to write to bioprojecthelp@ncbi.nlm.nih.gov to request updates and withdrawals as necessary. please note that when bioprojects are updated, the submission overview page in the submission portal will not reflect this change. that page is only a record of the initial submission, and does not display changes made in the bioproject database.
+should i cite bioproject accession numbers in my manuscript?
+
+no, typically, you should cite the accession numbers that are assigned to your data submissions, e.g. the genbank, wgs or sra accession numbers. if individual bioprojects do need to be referenced, state that "the data have been deposited with links to bioproject accession number prjnaxxxxxx in the ncbi bioproject database (https://www.ncbi.nlm.nih.gov/bioproject/)."
+how do i get a locus_tag prefix for annotating a genome assembly?
+
+a locus_tag prefix is automatically assigned to each bioproject/biosample pair of a “genome sequencing and assembly” project, but you must register the bioproject first and then register the biosample(s) associated with that bioproject. the locus_tag prefixes are reported back in the bioproject submission portal. if there are multiple prefixes, they are reported there in a file named “locustagprefix.txt”. if there are problems, write to bioprojecthelp@ncbi.nlm.nih.gov.
+
+if you request to have a prokaryotic genome annotated by ncbi’s prokaryotic genome annotation pipeline (pgap), then you need to have a bioproject and biosample registered for that genome. pgap will ensure that there is a locus_tag prefix for the genome when the pipeline is run, and the registered locus_tag prefix will be reported back in the bioproject submission portal.
+how do i create an umbrella bioproject?
+
+if you want to cluster several of your data-level projects under an umbrella, write to bioprojecthelp@ncbi.nlm.nih.gov with details about what projects you want to cluster and why.
+you are here: ncbi
+write to the help desk
+simple ncbi directory
+
+    getting started
+    ncbi education
+    ncbi help manual
+    ncbi handbook
+    training & tutorials
+    submit data
+
+    resources
+    chemicals & bioassays
+    data & software
+    dna & rna
+    domains & structures
+    genes & expression
+    genetics & medicine
+    genomes & maps
+    homology
+    literature
+    proteins
+    sequence analysis
+    taxonomy
+    variation
+
+    popular
+    pubmed
+    bookshelf
+    pubmed central
+    pubmed health
+    blast
+    nucleotide
+    genome
+    snp
+    gene
+    protein
+    pubchem
+
+    featured
+    genetic testing registry
+    pubmed health
+    genbank
+    reference sequences
+    gene expression omnibus
+    map viewer
+    human genome
+    mouse genome
+    influenza virus
+    primer-blast
+    sequence read archive
+
+    ncbi information
+    about ncbi
+    research at ncbi
+    ncbi news
+    ncbi ftp site
+    ncbi on facebook
+    ncbi on twitter
+    ncbi on youtube
+
+nlm
+nih
+dhhs
+usa.gov
+
+national center for biotechnology information, u.s. national library of medicine 8600 rockville pike, bethesda md, 20894 usa
+policies and guidelines | contact
+
+last updated: 2015-12-31t08:49:23-05:00
+
+
+
+    ncbincbi logo
+    skip to main content
+    skip to navigation
+    resources
+    how to
+    about ncbi accesskeys
+
+sign in to ncbi
+bioproject
+search database
+search term
+clear input
+bioproject faq
+ 
+what is a bioproject?
+
+a bioproject is a collection of biological data related to a single initiative originating from a single organization or from a consortium. a bioproject record provides users a single place to find links to the diverse data generated for that project and deposited into the archival databases maintained by members of the insdc. typical examples of a bioproject include a multiisolate project for sequencing multiple strains of a bacterial species, or a monoisolate project for the genome and transcriptome of a particular organism. the description you supply about this research effort is important for providing context to your experimental data.
+under what circumstances is it necessary to register a bioproject?
+
+bioproject registration is required as part of data deposit to several ncbi primary data archives including sra, tsa and wgs. typically, a bioproject is registered first or during the submission of a genome assembly being submitted to wgs. the bioproject is assigned a bioproject accession number (prjnaxxxxxx) which is referenced when submitting the corresponding biosamples and experimental data to archival databases. use the same bioproject accession for related data, eg the raw reads that are submitted to sra and a genome assembly of those reads that is submitted to genbank/wgs. at this time, bioproject submission is not required for geo or dbgap; deposit to those databases triggers automatic creation of bioproject records.
+how do i submit to bioproject?
+
+several submission routes are supported:
+
+bioproject submission portal to pre-register a project before submitting data
+
+    online wizard that supports single submission using web forms.
+    most submitters should use this method or the next one
+     
+
+wgs submission portal to register a project while submitting a genome to wgs
+
+    online wizard that supports single submission using web forms
+    most submitters should use this method or the previous one                                            
+
+xml deposit to pre-register
+
+    programmatic api deposit in xml format. suitable only when data is stored in an inhouse database or lims, and from which valid bioproject xml can be generated. here are the instructions and schemas.
+
+what information should i provide about my bioproject?
+
+you need to indicate the type of project and the sample scope, which are defined in the glossary.
+
+a description of the project is also required. provide comprehensive information that will allow users to fully interpret your study.
+
+you will need to select the relevance; the options are agricultural, environmental, evolution, industrial, medical, model organism or other. if ‘other’ is selected, then you’ll need to provide more detail on the form.
+
+although it is not required, it is highly recommended that you include the grant(s) associated with the research effort. a new feature in september 2015 is that you can look up your nih grant during the submission process. for non-nih grants you’ll need to provide the grant id and title as well as the funding agency.
+
+depending upon the scope of the project, the organism is required. for example, a monoisolate bioproject requires the genus and species, but you should also provide the infraspecific identifier (strain, breed, cultivar or isolate) that will be registered in biosample for that bioproject.
+when should i choose ‘multiisolate’ as the scope for a bioproject?
+
+choose multiisolate as the scope when the goal of the research is to compare multiple individuals or strains of the same species, eg, in a ‘variation’ or ‘genome sequencing and assembly’ project. choose multispecies when different species are being examined. choose monoisolate if the goal is to make a single genome or transcriptome assembly, even if more than one individual was the source of the dna or rna.
+do i need to make a separate bioproject for every type of data?
+
+no, you do not. you should organize your bioprojects the most appropriate way for your research effort. for example, if you are creating both transcriptome and genome assemblies of an organism, then you could register a single “genome sequencing and assembly” bioproject and submit all of the data with that bioproject. once the data are public, the bioproject will be automatically updated with links to the data and the additional project type will be added. be sure to include all the goals of the project in the description.
+what types of validation must my bioproject pass?
+
+beyond providing the required information on the submission web pages, the only validation is that the bioproject cannot be a duplicate. bioprojects from the same submitter are unique if any of these is different:
+
+    organism name, strain or isolate
+    project type
+    grant
+    organizations, eg a different consortium
+    external links to non-ncbi resources
+    title (this is usually auto-generated from the organism and project type)
+     
+
+when will i receive my bioproject accession number?
+
+if your submission passes validation, you can expect to receive a bioproject accession number(s) within a few minutes by email.
+when will my bioproject record be released?
+
+during submission, you are presented two options for releasing your bioproject to the public. if you select 'release immediately upon curation' the records will be released within a few hours of having a valid organism name. if you select 'release on a specified date', the bioproject will be released on the date you specify or upon the release of any data that reference that bioproject accession, whichever is first. at this time, we do not have a mechanism in place for you to view your records before release.
+will ncbi apply further curation to my bioproject records?
+
+no, bioproject is a submitter-driven repository. submitters are responsible for the content and accuracy of their records, and for ensuring that sufficient information has been provided to allow users to fully interpret their study. bioproject submissions must pass basic validation rules and taxonomy review. otherwise, records are generally not subject to further curation.
+how do i update my bioproject?
+
+at this time, it is necessary for submitters to write to bioprojecthelp@ncbi.nlm.nih.gov to request updates and withdrawals as necessary. please note that when bioprojects are updated, the submission overview page in the submission portal will not reflect this change. that page is only a record of the initial submission, and does not display changes made in the bioproject database.
+should i cite bioproject accession numbers in my manuscript?
+
+no, typically, you should cite the accession numbers that are assigned to your data submissions, e.g. the genbank, wgs or sra accession numbers. if individual bioprojects do need to be referenced, state that "the data have been deposited with links to bioproject accession number prjnaxxxxxx in the ncbi bioproject database (https://www.ncbi.nlm.nih.gov/bioproject/)."
+how do i get a locus_tag prefix for annotating a genome assembly?
+
+a locus_tag prefix is automatically assigned to each bioproject/biosample pair of a “genome sequencing and assembly” project, but you must register the bioproject first and then register the biosample(s) associated with that bioproject. the locus_tag prefixes are reported back in the bioproject submission portal. if there are multiple prefixes, they are reported there in a file named “locustagprefix.txt”. if there are problems, write to bioprojecthelp@ncbi.nlm.nih.gov.
+
+if you request to have a prokaryotic genome annotated by ncbi’s prokaryotic genome annotation pipeline (pgap), then you need to have a bioproject and biosample registered for that genome. pgap will ensure that there is a locus_tag prefix for the genome when the pipeline is run, and the registered locus_tag prefix will be reported back in the bioproject submission portal.
+how do i create an umbrella bioproject?
+
+if you want to cluster several of your data-level projects under an umbrella, write to bioprojecthelp@ncbi.nlm.nih.gov with details about what projects you want to cluster and why.
+you are here: ncbi
+write to the help desk
+simple ncbi directory
+
+    getting started
+    ncbi education
+    ncbi help manual
+    ncbi handbook
+    training & tutorials
+    submit data
+
+    resources
+    chemicals & bioassays
+    data & software
+    dna & rna
+    domains & structures
+    genes & expression
+    genetics & medicine
+    genomes & maps
+    homology
+    literature
+    proteins
+    sequence analysis
+    taxonomy
+    variation
+
+    popular
+    pubmed
+    bookshelf
+    pubmed central
+    pubmed health
+    blast
+    nucleotide
+    genome
+    snp
+    gene
+    protein
+    pubchem
+
+    featured
+    genetic testing registry
+    pubmed health
+    genbank
+    reference sequences
+    gene expression omnibus
+    map viewer
+    human genome
+    mouse genome
+    influenza virus
+    primer-blast
+    sequence read archive
+
+    ncbi information
+    about ncbi
+    research at ncbi
+    ncbi news
+    ncbi ftp site
+    ncbi on facebook
+    ncbi on twitter
+    ncbi on youtube
+
+nlm
+nih
+dhhs
+usa.gov
+
+national center for biotechnology information, u.s. national library of medicine 8600 rockville pike, bethesda md, 20894 usa
+policies and guidelines | contact
+
+last updated: 2015-12-31t08:49:23-05:00
+
